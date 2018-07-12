@@ -14,7 +14,7 @@ class App extends Component {
           <span className="App-content__head">Watchlist</span>
 
           <div className="App-content__stories">
-            {data.stories.map((story, index) => 
+            {this.getData().map((story, index) => 
               <StoryCard
                 key={index}
                 type={story.author_image_url ? 'tweet' : 'publication'}
@@ -25,6 +25,10 @@ class App extends Component {
         </div>
       </div>
     );
+  }
+
+  getData = () => {
+    return data.stories;
   }
 }
 

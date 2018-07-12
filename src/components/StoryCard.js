@@ -150,7 +150,7 @@ export default class StoryCard extends Component {
         return num > 999 && num < 999999 
             ? Math.floor(num / 1000) + 'k' 
             : num > 999999
-            ? Math.floor(num / 1000000) + 'M'
+            ? Math.floor(num / 1000000) + 'm'
             : num
     }
 
