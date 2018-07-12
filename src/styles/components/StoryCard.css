@@ -66,6 +66,7 @@
 
 .details-header__info--title {
     font-size: 16px;
+    padding-bottom: 4px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
@@ -80,12 +81,14 @@
 
 .details-header__info--about>.twitter-icon {
     width: 13px;
-    margin-right: 11px;
+    float: left;
+    padding-right: 11px;
     vertical-align: middle;
 }
 
 .details-header__info--about>span {
-    margin-right: 11px;
+    padding-right: 11px;
+    float: left;
     font-size: 12px;
     line-height: 15px;
     font-weight: normal;
@@ -218,6 +221,9 @@
         width: 100%;
         display: block;
         padding-bottom: 26px;
+    }
+    .details-header__percentage {
+        min-width: 33.7px;
     }
     .details-description.show {
         padding-bottom: 26px;

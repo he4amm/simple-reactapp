@@ -39,7 +39,7 @@ export default class StoryCard extends Component {
                         <div className="details-header">
                             <span className="details-header__info">
                                 <span className="details-header__info--title"
-                                    onClick={() => this.openURL(this.props.story.url)}>
+                                    onClick={() => this.openURL()}>
                                     {this.props.story.title}
                                 </span>
                                 <span className="details-header__info--about">
@@ -73,7 +73,7 @@ export default class StoryCard extends Component {
                         }
                     </div>
                     <div className="Card__content--expand">
-                        {this.props.type === 'tweet' || this.props.story.description ? 
+                        {!isMobile || this.props.type === 'tweet' || this.props.story.description ? 
                             <span className="expand-btn"
                                 onClick={() => this.toggleExpand()}>
                                 <span className="text">
@@ -154,8 +154,15 @@ export default class StoryCard extends Component {
             : num
     }
 
-    openURL = (url) => {
-        let win = window.open(url, '_blank');
+    openURL = () => {
+        let win;
+
+        if (this.props.type === 'tweet') {
+            win = window.open(`https://twitter.com/statuses/${this.props.story.additional_data.tweet_id}`, '_blanck');
+        } else {
+            win = window.open(this.props.story.url, '_blank');
+        }
+
         win.focus();
     }
 }
