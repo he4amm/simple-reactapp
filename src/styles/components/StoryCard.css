@@ -222,6 +222,10 @@
         display: block;
         padding-bottom: 26px;
     }
+    .details-header__info--about>span,
+    .details-header__info--about>.twitter-icon {
+        padding-right: 6px;
+    }
     .details-header__percentage {
         min-width: 33.7px;
     }
