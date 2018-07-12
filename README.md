@@ -4,8 +4,8 @@
 
 ## Install
 
-    $ git clone https://github.com/he4amm/mini-react-dashboard-DnD.git
-    $ cd mini-react-dashboard-DnD
+    $ git clone https://github.com/he4amm/simple-reactapp.git
+    $ cd simple-reactapp
     $ npm install
 
 ## Start & watch
