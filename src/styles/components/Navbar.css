@@ -1,0 +1,133 @@
+/**********************************
+** NAVBAR
+***********************************/
+
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+}
+
+.Navbar__logo {
+    width: 154px;
+    height: 30px;
+    margin: 10px 0px 10px 12px;
+}
+
+.Navbar__btn {
+    display: none;
+    background: transparent;
+    border: 0px;
+    padding: 13px;
+}
+
+.Navbar__btn--bars {
+    width: 24px;
+    height: 21px;
+}
+
+/**********************************
+** DROPDOWN
+***********************************/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0px;
+    height: 50px;
+    padding: 0px 18px;
+}
+
+.dropdown-btn__img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.dropdown-btn__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-btn__title--text {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #333333;
+    margin-right: 5px;
+}
+
+.dropdown-btn__title--cart {
+    height: 7px;
+    width: 7px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 100%;
+    background-color: #fff;
+    border: 0px;
+    border-radius: 0px;
+    z-index: 1;
+    margin: 0px;
+    padding: 5px 0px;
+    list-style-type: none;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-padding-start: 0px;
+}
+
+.dropdown.open>.dropdown-content {
+    display: block !important;
+}
+
+.dropdown.open>.dropdown-btn {
+    background-color: #eeeeee;
+}
+
+.dropdown-content>li {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #292929;
+    padding: 14px 0px 14px 18px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+    .Navbar__btn {
+        display: block;
+    }
+    .dropdown-btn__title--text {
+        display: none;
+    }
+    .dropdown-content>li {
+        padding: 10px;
+        text-align: center;
+    }
+}
