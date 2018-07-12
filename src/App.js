@@ -17,6 +17,7 @@ class App extends Component {
             {data.stories.map((story, index) => 
               <StoryCard
                 key={index}
+                type={story.author_image_url ? 'tweet' : 'publication'}
                 story={story}
               ></StoryCard>
             )}

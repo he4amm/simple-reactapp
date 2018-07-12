@@ -25,7 +25,27 @@
     letter-spacing: normal;
 }
 
-@media (max-width: 768px) {
+/*
+** DESKTOP VIEW ONLY
+*/
+
+@media (min-width: 1025px) {}
+
+/*
+** TABLET VIEW ONLY
+*/
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .App-content {
+        padding: 19px 11px 19px 11px;
+    }
+}
+
+/*
+** MOBILE VIEW ONLY
+*/
+
+@media (max-width: 480px) {
     .App-content {
         padding: 19px 11px 19px 11px;
     }
