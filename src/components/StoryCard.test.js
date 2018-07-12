@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-dom/test-utils';
 
+import Enzyme, { mount, shallow } from 'enzyme';
+import EnzymeAdapter from 'enzyme-adapter-react-16';
+import sinon from "sinon";
+
 import StoryCard from './StoryCard';
 import data from '../stories.json';
 
 describe('StoryCard component', () => {
     let component, node, storyCard;
-
+    Enzyme.configure({ adapter: new EnzymeAdapter() });
+    
     beforeEach(() => {
         storyCard = <StoryCard
             story={data.stories[0]}
@@ -46,5 +51,12 @@ describe('StoryCard component', () => {
         expect(component.getFollowersFormat(1000)).toEqual('1k');
         expect(component.getFollowersFormat(49000)).toEqual('49k');
         expect(component.getFollowersFormat(4000000)).toEqual('4m');
+    });
+
+    it ('check url opend in new window if title click', () => {
+        const wrapper = shallow((storyCard));
+        wrapper.instance().openURL = jest.fn();
+        wrapper.find('.details-header__info--title').simulate('click');
+        expect(wrapper.instance().openURL).toBeCalled();
     });
 });
