@@ -1,4 +1,4 @@
-# Mini React Dashboard Drag and Drop
+# Mini React APP
 
 ### Online demo: https://he4amm.github.io/simple-reactapp/
 
